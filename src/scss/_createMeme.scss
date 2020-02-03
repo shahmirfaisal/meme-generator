@@ -1,0 +1,73 @@
+.create-meme {
+  padding: 1.5rem;
+
+  &__heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .form {
+    // border: 1px solid black;
+    width: 300px;
+    @media (max-width: 550px) {
+      width: 90%;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    &__label {
+      display: inline-block;
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__input {
+      padding: 0.5rem 2rem;
+      font-size: 1.6rem;
+    }
+
+    &__btn {
+      width: 100%;
+      border: none;
+      background-color: $primary-color;
+      color: white;
+      padding: 1rem 0;
+      font-size: 1.7rem;
+      letter-spacing: 0.05rem;
+      word-spacing: 0.2rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__container {
+      flex-direction: column;
+    }
+
+    .form {
+      width: 500px;
+      margin-top: 4rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .form {
+      width: 100%;
+    }
+  }
+}
